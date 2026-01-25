@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -45,11 +45,19 @@
 
 <section>
   <h2>Contact Us for Service</h2>
-  <form name="contact" method="POST">
+  <!-- Form that sends submissions to your phone via SMS -->
+  <form action="https://formsubmit.co/1234567890@vtext.com" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="tel" name="phone" placeholder="Phone Number" required>
     <input type="email" name="email" placeholder="Email (optional)">
     <textarea name="message" placeholder="What can we help you with?" required></textarea>
+
+    <!-- Optional: Redirect to a thank-you page after submission -->
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+
+    <!-- Optional: Disable CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false">
+
     <button type="submit">Send Message</button>
   </form>
 </section>
